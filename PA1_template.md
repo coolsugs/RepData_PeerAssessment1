@@ -33,8 +33,9 @@ library(ggplot2)
 ## Loading and preprocessing the data
 
 ```r
-# setting working directory
-setwd("D:/Coursera/Course5_ReproducibleResearch/Week2/Project")
+if (!file.exists("activity.csv")) {
+  unzip(zipfile="activity.zip")
+}
 # read csv file
 act_org <- read.csv("activity.csv")
 dim(act_org)

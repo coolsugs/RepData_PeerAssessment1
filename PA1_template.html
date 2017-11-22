@@ -134,8 +134,9 @@ library(dplyr)</code></pre>
 <pre><code>## Warning: package 'ggplot2' was built under R version 3.4.2</code></pre>
 <div id="loading-and-preprocessing-the-data" class="section level2">
 <h2>Loading and preprocessing the data</h2>
-<pre class="r"><code># setting working directory
-setwd(&quot;D:/Coursera/Course5_ReproducibleResearch/Week2/Project&quot;)
+<pre class="r"><code>if (!file.exists(&quot;activity.csv&quot;)) {
+  unzip(zipfile=&quot;activity.zip&quot;)
+}
 # read csv file
 act_org &lt;- read.csv(&quot;activity.csv&quot;)
 dim(act_org)</code></pre>
